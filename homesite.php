@@ -1,11 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-    
-</head>
+<!-- J'ai enlevé le head pour le mettre dans le dossier include et l'appeler chaque fois. ce que je trouve plus pratique -->
+<?php include 'include/head.php'; ?>
 <body>
 <!-- navbar for homesite-->
 <div class="navbar"> 

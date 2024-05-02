@@ -1,27 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign up</title>
-    
-</head>
-<body>
-    <!-- sign up form-->
-    <form action="Action/sign_upAction.php" method="post">
-        <label for="name"></label>
-        <input type="text" id="name" name="name" placeholder="name" required>
-        <label for="username"></label>
-        <input type="text" id="username" name="username" placeholder="username/e-mail" required>
-        <label for="mail"></label>
-        <input type="e-mail" id="mail" name="mail" placeholder="e-mail" required>
-        <label for="birthdate"></label>
-        <input type="date" id="birthdate" name="birthdate" required>
-        <label for="password"></label>
-        <input type="password" id="password" name="password" placeholder="password" minlength="8" required>
-        <input type="submit" value="sign up">
-        <p> <a href="sign_in.php">sign in</a></p>
-
-    </form>
+<?php include 'include/head.php'; ?>
+<body class="body_sign_up">
+            <!-- sign up form-->
+        <div class="sign_up_block">
+            <form action="Action/sign_upAction.php" method="post">
+                <label for="name">Name</label>
+                <input type="text" id="name" name="name" placeholder="Name" required>
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Username or Email" required>
+                <label for="mail">Email</label>
+                <input type="email" id="mail" name="mail" placeholder="Email" required>
+                <label for="birthdate">Birthday</label>
+                <input type="date" id="birthdate" name="birthdate" required>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" minlength="8" required>
+                <input type="submit" value="sign up">
+                <p> Do you already have an account? <a href="sign_in.php">Sign in</a></p>
+            </form>
+        </div>
 </body>
 </html>
