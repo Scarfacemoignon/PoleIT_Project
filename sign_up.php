@@ -15,7 +15,7 @@
                 <input type="date" id="birthdate" name="birthdate" required>
                 <label for="password">Password</label>
                 <input type="password" id="password" name="password" placeholder="Password" minlength="8" required>
-                <input type="submit" value="sign up">
+                <input type="submit" value="Sign up">
                 <p> Do you already have an account? <a href="sign_in.php">Sign in</a></p>
             </form>
         </div>

@@ -6,7 +6,9 @@
 
 .sign_up_block {
     display: flex;
+    font-family: "inter", sans-serif;
     justify-content: center;
+    color: white;
     align-items: center;
     height: 80vh;
 }
@@ -14,7 +16,7 @@
 .sign_up_block form {
     width: 300px;
     padding: 20px;
-    background-color: #f0f0f0;
+    background-color: #17171b;
     opacity: 0.8;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);

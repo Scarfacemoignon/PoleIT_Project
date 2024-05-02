@@ -9,7 +9,7 @@
             <input type="text" id="username" name="username" placeholder="username or email" required>
             <label for="password">Password</label>
             <input type="password" id="password" name="password" placeholder="password" required>
-            <input type="submit" value="sign in">
+            <input type="submit" value="Sign in">
             <p>You don't have an account ? create a new one <a href="sign_up.php">Sign up</a></p>
 
         </form>
