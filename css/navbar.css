@@ -10,19 +10,39 @@ body {
   background-color: #17171b;
 }
 
+
 .topnav a {
-  float: left;
+  float: right;
   display: block;
   color: white;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
   font-size: 17px;
+  margin-right: 10px;
 }
 
 .topnav a:hover {
   background-color: #ddd;
   color: black;
+}
+
+.img-logo a {
+  float: left;
+  margin-left: 0%;
+  background-color: #17171b;
+  color:#ccc;
+  padding-left:0px;
+}
+.img-logo a:hover {
+  background-color: #17171b;
+  color:#ccc;
+}
+
+.img-logo img {
+  width: 3%;
+  height: auto;
+  float: left;
 }
 
 .topnav a.active {
@@ -39,6 +59,7 @@ body {
   margin-top: 8px;
   font-size: 17px;
   border: none;
+  border-radius: 10px 0 0 10px;
 }
 
 .topnav .search-container button {
@@ -50,6 +71,7 @@ body {
   font-size: 17px;
   border: none;
   cursor: pointer;
+  border-radius: 0 10px 10px 0;
 }
 
 .topnav .search-container button:hover {
@@ -67,8 +89,26 @@ body {
     width: 100%;
     margin: 0;
     padding: 14px;
+    border-radius: 0px 0px 0px 0px;
   }
   .topnav input[type=text] {
     border: 1px solid #ccc;  
+  
+  }
+  .img-logo a {
+    float: none;
+    margin: 0 auto;
+    display: block;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 20px;
+    font-weight: bold;
+  }
+
+  .img-logo img {
+    width: 30%; /* Change la largeur de l'image à 50% lorsque la largeur de l'écran est inférieure à 768px */
+    height: auto;
+    margin-left: 35%;
+    float: none;
   }
 }

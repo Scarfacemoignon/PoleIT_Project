@@ -5,7 +5,11 @@
 <!-- Blog main page after sign in-->
 <?php 
 require ("Action/sessionsecure.php");
-echo "Home blog";?> 
-<a href="Action/disconnect.php">disconnect</a>
+?> 
+<div class="navbar"> 
+<?php include 'include/navbar.php'; ?>
+</div>
+
+
 </body>
 </html>

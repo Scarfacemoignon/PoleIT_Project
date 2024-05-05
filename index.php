@@ -54,56 +54,43 @@
             <span class="dot" onclick="currentSlide(5)"></span> 
       </div>
 
-<?php 
-require ("Database/connect.php");
-// Last articles in the blog
-$article = "SELECT * FROM article ";
-$result = $connect->query($article);
+     <!-- /* debut bloc pour les cards */ -->
+      <?php 
+      require ("Database/connect.php");
 
+      // Last articles in the blog
+      $article = "SELECT * FROM article ORDER BY id DESC LIMIT 6";
+      $result = $connect->query($article);
 
-  if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc() ) {
-        
-        $id = $row["id"];
-        echo"<div class= 'article'>";
-        echo "<h2>" . $row["title"] . "</h2>";
-        echo "<p>" . $row["description"] . "</p>";
-        
-    
-}} else {
-    echo "No article found.";
-} 
-$connect->close();
-echo"</div>";
-
-?>
-    <script>
-          let slideIndex = 1;
-          showSlides(slideIndex);
-
-          function plusSlides(n) {
-            showSlides(slideIndex += n);
+      if ($result->num_rows > 0) {
+          echo '<section class="card-list">';
+          echo '<h2 class="latest_article">Latest Articles</h2>';
+          echo "<p>PoleIT's Aeronautics Research Mission Directorate is working to enable industry to introduce transformative options for future air travel in at least four major areas.</p>";
+          echo '<div class="card-container">';
+          while($row = $result->fetch_assoc()) {
+              $id = $row["id"];
+              echo '<div class="card-item">';
+              echo '<img src="images/planet.jpg" alt="Article">';
+              // echo '<img src="' . $row["image_path"] . '" alt="Article">';
+              echo '<div class="card-content">';
+              echo '<h3>' . $row["title"] . '</h3>';
+              echo '<p>' . $row["description"] . '</p>';
+              echo '<a href="homeblog.php?id=' . $id . '" class="read-more">Read More</a>';
+              echo '</div>';
+              echo '</div>';
           }
+          echo '</div>';
+          echo '</section>';
+      } else {
+          echo "No article found.";
+      } 
+      $connect->close();
+      ?>
 
-          function currentSlide(n) {
-            showSlides(slideIndex = n);
-          }
+      <!-- /* Fin bloc pour les cards */ -->
 
-          function showSlides(n) {
-            let i;
-            let slides = document.getElementsByClassName("mySlides");
-            let dots = document.getElementsByClassName("dot");
-            if (n > slides.length) {slideIndex = 1}    
-            if (n < 1) {slideIndex = slides.length}
-            for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";  
-            }
-            for (i = 0; i < dots.length; i++) {
-              dots[i].className = dots[i].className.replace(" active", "");
-            }
-            slides[slideIndex-1].style.display = "block";  
-            dots[slideIndex-1].className += " active";
-          }
-    </script>
+
+    <script src="js/script.js"></script>
+    <!-- <script src="js/cards.js"></script> -->
 </body>
 </html>
