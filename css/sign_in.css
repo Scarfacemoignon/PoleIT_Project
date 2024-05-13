@@ -1,6 +1,7 @@
-.body_sign_in{
-    background-image: url("../images/background-signin.jpg");
+.body_sign_in {
+    background-image: url("../images/satellite2.jpg");
     background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .sign_in_block {
@@ -9,17 +10,19 @@
     justify-content: center;
     align-items: center;
     color: white;
-    height: 53vh;
+    margin-top: 10%;
 }
 
 .sign_in_block form {
-    width: 300px;
+    width: 20%;
+    height: auto; /* Augmenter la hauteur à 400px */
     padding: 20px;
     background-color: #17171b;
     opacity: 0.8;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+
 
 .sign_in_block label {
     display: block;
@@ -56,5 +59,17 @@
 }
 
 .sign_in_block a {
-    color: blue;
+    color: rgb(255, 128, 0);
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .sign_in_block form {
+        width: 80%;
+    }
+    .body_sign_in {
+        background-image: url("../images/satellite2.jpg");
+       
+        background-repeat: repeat;
+    }
 }

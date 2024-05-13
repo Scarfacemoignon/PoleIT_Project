@@ -42,10 +42,14 @@
 }
 
 .card-item h3 {
-    color: #fff;
+    color: Black;
     font-size: 1.438rem;
     margin-top: 28px;
     font-weight: 600;
+}
+
+.card-list .card-item:hover h3 {
+    color: #fff;
 }
 
 .card-list .card-item:hover {
