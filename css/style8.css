@@ -1,0 +1,274 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Verdana, sans-serif;
+  margin: 0;
+}
+
+.slideshow-container {
+  width: 100%;
+  position: relative;
+  margin: 0;
+  height: 88vh;
+}
+
+.mySlides {
+  width: 100%;
+  height: 103%;
+  margin-left: 0;
+  animation: fade 2s ease-in-out;
+}
+
+.img-caroussel {
+  width: 100%;
+  height: 97%;
+  object-fit: cover;
+  margin: 10px 10px 10px 0;
+  transition: opacity 1s ease-in-out;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -22px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  opacity: 0.5;
+  background-color: white;
+}
+
+.next {
+  right: 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(41, 143, 198, 0.8);
+}
+
+.text {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  left: 0;
+  right: 0;
+  width: auto;
+  margin: auto;
+  text-align: center;
+}
+
+.dot {
+  cursor: pointer;
+  height: 12px;
+  width: 12px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+@media only screen and (max-width: 300px) {
+  .prev, .next, .text {
+    font-size: 10px;
+  }
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.big-title,
+.small-title {
+  animation: slideInFromLeft 2s ease-in-out;
+}
+
+.big-title {
+  font-size: 4vw;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: #ffffff;
+  position: absolute;
+  font-size: calc(4.3em + 0.6vw);
+  font-weight: 900;
+  top: 50%;
+  left: 7%;
+  text-transform: uppercase;
+}
+
+.small-title {
+  font-size: 3vh;
+  color: #ffffff;
+  position: absolute;
+  bottom: 30%;
+  left: 7%;
+}
+
+/* Styles de la galerie */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+}
+
+.gallery-item {
+  width: calc(20% - 20px);
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.03);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+.gallery-item .text {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+.container-article {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: rgb(255, 255, 255) ;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+}
+
+.bloc-article {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin-bottom: 20px; 
+}
+
+.bloc-image,
+.bloc-text {
+  width: 70%;
+}
+
+.bloc-image img {
+  width: 100%;
+}
+
+.bloc-text {
+  padding: 0 20px;
+  text-align: justify;
+}
+
+.bloc-text h2 {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: calc(1.5em + 0.1vw);
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.bloc-text h3 {
+  font-size: 17px;
+  margin-bottom: 10px;
+  color: #717171;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.bloc-text p {
+  font-size: 14px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  font-weight: lighter;
+  color: #5a5a5a;
+  font-style: normal;
+}
+
+
+
+
+@media screen and (max-width: 768px) {
+  .bloc-article {
+    flex-direction: column;
+  }
+
+  .bloc-image,
+  .bloc-text {
+    width: 100%;
+  }
+}
+
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 15px;
+  margin-top: -22px;
+  color: rgba(0, 0, 0, 0.5);
+  font-weight: bold;
+  font-size: 16px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  opacity: 0.5;
+  background-color: white;
+}
+
+
+.title-gallery {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: calc(2.5em + 0.5vw);
+  margin: 70px 0px 35px 35%;
+  text-align: center;
+  color: white;
+  padding: 8px 2px;
+  border-radius: 5px;
+  font-weight: normal;
+  background-color: rgb(15, 90, 175);
+  width: 400px;
+  height: 80px;
+}

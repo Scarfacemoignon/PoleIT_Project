@@ -10,47 +10,42 @@
          <!-- Début de la Caroussel -->
          <div class="slideshow-container">
   <div class="mySlides fade">
-    <div class="numbertext">1 / 5</div>
-    <img class="img-caroussel" src="images/planet.jpg">
-    <div class="big-title">A planetarium</div>
-    <div class="small-title">PoleIT</div>
+    <img class="img-caroussel" src="images/planet copy.jpg">
+    <div class="big-title">Welcome To <br> POLE-IT</div>
+    <div class="small-title"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">2 / 5</div>
-    <img class="img-caroussel" src="images/observatoire.jpg">
+    <img class="img-caroussel" src="images/observatory.jpg">
     <div class="big-title">An observatory</div>
-    <div class="small-title">Caption Two</div>
+    <div class="small-title"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">3 / 5</div>
     <img class="img-caroussel" src="images/lune.jpg">
-    <div class="big-title">Daytime exhibitions</div>
-    <div class="small-title">Caption Three</div>
+    <div class="big-title">Daytime <br> exhibitions
+      
+    </div>
+    <div class="small-title"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">4 / 5</div>
     <img class="img-caroussel" src="images/satelite.jpg">
-    <div class="big-title">Night exhibitions</div>
-    <div class="small-title">Caption four</div>
+    <div class="big-title">Night <br> exhibitions</div>
+    <div class="small-title"></div>
   </div>
 
   <div class="mySlides fade">
-    <div class="numbertext">5 / 5</div>
     <img class="img-caroussel" src="images/activity.jpg">
     <div class="big-title">Daily activities for <br>young and old</div>
-    <div class="small-title">Caption five</div>
+    <div class="small-title"></div>
   </div>
 
-  <!-- Boutons précédent/suivant -->
   <a class="prev" onclick="plusSlides(-1)">❮</a>
   <a class="next" onclick="plusSlides(1)">❯</a>
 </div>
 <br>
 
-<!-- Indicateurs de position -->
 <div style="text-align:center">
   <span class="dot" onclick="currentSlide(1)"></span> 
   <span class="dot" onclick="currentSlide(2)"></span> 
@@ -58,14 +53,10 @@
   <span class="dot" onclick="currentSlide(4)"></span> 
   <span class="dot" onclick="currentSlide(5)"></span> 
 </div>
-<!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-     <!-- /* debut bloc pour les cards */ -->
       <?php 
       require ("Database/connect.php");
 
-      // Last articles in the blog
-      $article = "SELECT * FROM article ORDER BY id DESC LIMIT 6";
+      $article = "SELECT * FROM article ORDER BY id DESC LIMIT 4";
       $result = $connect->query($article);
 
       if ($result->num_rows > 0) {
@@ -76,8 +67,7 @@
           while($row = $result->fetch_assoc()) {
               $id = $row["id"];
               echo '<div class="card-item">';
-              echo '<img src="images/planet.jpg" alt="Article">';
-              // echo '<img src="' . $row["image_path"] . '" alt="Article">';
+              echo '<img src="images/planet.jpg">';
               echo '<div class="card-content">';
               echo '<h3>' . $row["title"] . '</h3>';
               echo '<p>' . $row["description"] . '</p>';
@@ -92,10 +82,6 @@
       } 
       $connect->close();
       ?>
-    
-
-      <!-- /* Fin bloc pour les cards */ -->
-      <!--//////////////////////////////////////////////////////////////-->
            <div class="container-article">
                 <div class="bloc-article">
                     <div class="bloc-image">
@@ -143,85 +129,22 @@ Les caméras ont été équipées d'un système de ventilation pour évacuer la 
                 </div>
                 <div class="hr-article"></div>
           </div>
-
-
-
-
-      <!--//////////////////////////////////////////////////////////////-->
-
-<!-- /* debut bloc pour la gallery */ //////////////////////////////////////////////////////////////-->
       <h2 class="title-gallery">Our Gallery</h2>
           <div class="gallery">
           
             <div class="gallery-item">
               <img src="images/galerie/1.jpg" alt="Image 1">
-              <div class="overlay">
-                <div class="text">Image 1</div>
-              </div>
             </div>
             <div class="gallery-item">
               <img src="images/galerie/2.jpg" alt="Image 2">
-              <div class="overlay">
-                <div class="text">Image 2</div>
-              </div>
             </div>
             <div class="gallery-item">
               <img src="images/galerie/8.jpg" alt="Image 3">
-              <div class="overlay">
-                <div class="text">Image 3</div>
-              </div>
             </div>
-            <div class="gallery-item">
-              <img src="images/galerie/4.jpg" alt="Image 4">
-              <div class="overlay">
-                <div class="text">Image 4</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/5.jpg" alt="Image 4">
-              <div class="overlay">
-                <div class="text">Image 4</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/6.jpg" alt="Image 6">
-              <div class="overlay">
-                <div class="text">Image 6</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/7.jpg" alt="Image 7">
-              <div class="overlay">
-                <div class="text">Image 7</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/3.jpg" alt="Image 8">
-              <div class="overlay">
-                <div class="text">Image 8</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/9.jpg" alt="Image 9">
-              <div class="overlay">
-                <div class="text">Image 9</div>
-              </div>
-            </div>
-            <div class="gallery-item">
-              <img src="images/galerie/10.jpg" alt="Image 10">
-              <div class="overlay">
-                <div class="text">Image 10</div>
-              </div>
-            </div>
-            <!-- Add more gallery items as needed -->
-          </div>
           <br>
-<!-- /* Fin bloc pour la gallery */ -->
-<!--//////////////////////////////////////////////////////////////-->
 
       <?php include 'include/footer.php'; ?>
 
     <script src="js/script.js"></script>
-    <!-- <script src="js/cards.js"></script> -->
 </body>
 </html>

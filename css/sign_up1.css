@@ -1,0 +1,85 @@
+.body_sign_up {
+    background-image: url("../images/background4.jpg");
+    background-size: cover;
+    position: fixed;
+}
+
+.sign_up_block {
+    display: flex;
+    justify-content: center;
+    color: white;
+    align-items: center;
+    height: 100vh;
+    width: 370%;
+}
+
+.sign_up_block form {
+    width: 350px;
+    padding: 20px;
+    background-color: #031129e9;
+    opacity: 0.9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sign_up_block label {
+    display: block;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign_up_block input[type="text"],
+.sign_up_block input[type="email"],
+.sign_up_block input[type="date"],
+.sign_up_block input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign_up_block input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #FF8337;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: medium;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.sign_up_block input[type="submit"]:hover {
+    background-color: rgb(15, 90, 175);
+}
+
+.sign_up_block p {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.sign_up_block a {
+    font-weight: bold;
+    color: rgb(246, 118, 55);
+    text-decoration: none;
+}
+
+::placeholder {
+    opacity: 55%;
+    font-style: ;
+}
+
+@media screen and (max-width: 768px) {
+    .sign_up_block {
+        width: 100%;
+    }
+
+    .sign_up_block form {
+        width: 90%;
+    }
+}

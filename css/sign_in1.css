@@ -1,0 +1,144 @@
+.container {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	height: 100vh;
+	padding: 0 0px;
+    background: url("../images/bk1.jpg");
+    background-size: cover;
+}
+
+.left-side {
+	width: 50%;
+	height: 100%;
+}
+
+.left-side img {
+	width: 120%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.right-side {
+    margin: 0 60px;
+    margin-top: 100px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: rgba(8, 27, 51, 0.477);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.3);
+    width: 400px;
+}
+
+.right-side h1 {
+	font-size: 2rem;
+	margin-bottom: 46px;
+    color: white;
+}
+
+.right-side label {
+	display: block;
+	margin-bottom: 1px;
+    color: white;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-side input[type="text"],
+.right-side input[type="password"] {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 20px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+	font-size: 1rem;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-side input[type="submit"] {
+	width: 100%;
+	padding: 10px;
+	background-color: #FF8337;
+	color: #fff;
+	border: none;
+	border-radius: 4px;
+	font-size: 1rem;
+	cursor: pointer;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-side input[type="submit"]:hover {
+	background-color: rgb(15, 90, 175);
+}
+
+.right-side p {
+	margin-top: 30px;
+	text-align: center;
+    color: rgb(255, 255, 255);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.right-side a {
+    font-weight: bold;
+	text-decoration: none;
+    color: rgb(246, 118, 55);
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+::placeholder {
+    opacity: 30%;
+    font-style: italic;
+    font-weight: lighter;
+    font-size: small;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        height: auto;
+        padding: 20px;
+        background: url("../images/satellite2.jpg");
+        background-size: cover;
+    }
+
+    .left-side {
+        width: 100%;
+        height: auto;
+        display: none; 
+    }
+
+    .right-side {
+        width: 80%;
+        margin: 20px auto;
+        margin-top: 50px;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .right-side h1 {
+        font-size: 1.5rem;
+        margin-bottom: 30px;
+    }
+
+    .right-side input[type="text"],
+    .right-side input[type="password"] {
+        font-size: 0.9rem;
+    }
+
+    .right-side input[type="submit"] {
+        font-size: 0.9rem;
+    }
+
+    .right-side p {
+        font-size: 0.9rem;
+    }
+
+    .right-side a {
+        font-size: 0.9rem;
+    }
+}

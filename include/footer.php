@@ -30,7 +30,6 @@
           <a href="#"><li>A propos</li></a>
         </ul>
       </div>
-      <!-- //////////////////////////////////////////////////////////////// -->
           <div class="footer-section contact-form">
             <div class="svg-frame">
                 <svg style="--i:0;--j:0;">
@@ -78,10 +77,9 @@
 
               </div>
           </div>
-          <!-- ////////////////////////////////////////////////////////// -->
     </div>
     <div class="footer-bottom">
-      &copy; 2024 PoleIT | Designed by You
+      &copy; 2024 PoleIT | Designed by Groupe projet Ecole-IT
     </div>
   </footer>
 </body>

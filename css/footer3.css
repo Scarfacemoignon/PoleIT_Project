@@ -1,0 +1,184 @@
+.footer {
+  background-color: #070707df;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.footer-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.footer-section h2 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 8px;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Contact Form Styles */
+.text-input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact-input {
+  height: 80px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.btn-big {
+  padding: 12px 20px;
+}
+
+.contact-btn {
+  background-color: #e74c3c;
+}
+
+.contact-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Footer Bottom Styles */
+.footer-bottom {
+  text-align: center;
+  padding: 10px 0;
+  background-color: #222;
+  color: #aaa;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+.img-logo-footer {
+  width: 20%;
+  height: auto;
+  margin-left: 1%;
+  float: none;
+}
+
+.svg-frame {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  transform-style: preserve-3d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+}
+
+.svg-frame svg {
+  position: absolute;
+  transition: .5s;
+  z-index: calc(1 - (0.2 * var(--j)));
+  transform-origin: center;
+  width: 250px;
+  height: 250px;
+  fill: none;
+}
+
+.svg-frame:hover svg {
+  transform: rotate(-80deg) skew(30deg) translateX(calc(45px * var(--i))) translateY(calc(-35px * var(--i)));
+}
+
+.svg-frame svg #center {
+  transition: .5s;
+  transform-origin: center;
+}
+
+.svg-frame:hover svg #center {
+  transform: rotate(-30deg) translateX(45px) translateY(-3px);
+}
+
+#out2 {
+  animation: rotate16 7s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#out3 {
+  animation: rotate16 3s ease-in-out infinite alternate;
+  transform-origin: center;
+  stroke: #ff0;
+}
+
+#inner3,
+#inner1 {
+  animation: rotate16 4s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+#center1 {
+  fill: #ff0;
+  animation: rotate16 2s ease-in-out infinite alternate;
+  transform-origin: center;
+}
+
+@keyframes rotate16 {
+  to {
+      transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .footer-content {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .footer-section {
+      width: 100%;
+      padding: 10px 20px;
+      text-align: center;
+  }
+
+  .img-logo-footer {
+      width: 50%;
+      margin: 0 auto 20px auto;
+  }
+
+  .svg-frame {
+      width: 80%;
+      height: auto;
+      margin: 20px 0;
+  }
+}

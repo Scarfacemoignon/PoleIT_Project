@@ -1,0 +1,93 @@
+/* Basic styles */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/bk1.jpg");
+  background-size: cover;
+  color: #fff;
+}
+
+/* Article container */
+.article-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: rgba(41, 42, 45, 0.9);
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Individual article */
+.article {
+  margin-bottom: 20px;
+}
+
+h1 {
+  color: #ffffff;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Article heading */
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+/* Article description */
+p {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+/* Button */
+.button-article, .button-article1 {
+  background-color: rgb(249, 82, 10);
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.button-article:hover, .button-article1:hover {
+  background-color: #0056b3;
+}
+
+/* Button container */
+.button-content {
+  text-align: center;
+  margin: 0px 0;
+}
+
+.button-content .button-article1 {
+  background-color: #0056b3;
+}
+
+.button-content .button-article1:hover {
+  background-color: rgb(249, 82, 10);
+}
+
+/* Responsive layout */
+@media (max-width: 768px) {
+  .article-container {
+      padding: 20px;
+  }
+
+  .button-content {
+      margin: 0px 0;
+  }
+}
+
+/* Horizontal rule styling */
+hr {
+  border: none;
+  height: 1px;
+  background-color: #444;
+  margin: 50px 0;
+}
