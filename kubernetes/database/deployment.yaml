@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: mysql-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: mysql
+  template:
+    metadata:
+      labels:
+        app: mysql
+    spec:
+      containers:
+      - name: container-mysql
+        image: mysql:8.0-debian
+        envFrom:
+        - secretRef:
+            name: mysql-secret  # Replace with the name of your Secret if using one
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: mysql-volume  # Replace with the name of your PersistentVolumeClaim
+        ports:
+        - containerPort: 3306
+        resources:
+          limits:
+            memory: "512Mi"
+            cpu: "1000m"
+          requests:
+            memory: "256Mi"
+            cpu: "500m"
+      volumes:
+      - name: mysql-volume
+        persistentVolumeClaim:
+          claimName: mysql-volume

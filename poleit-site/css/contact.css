@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+.contact-hero {
+    position: relative;
+    text-align: center;
+    color: #fff;
+    margin-bottom: 40px;
+}
+
+.contact-hero .imagebk {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(25%);
+}
+
+.contact-hero h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.contact-container {
+    max-width: 1200px;
+    margin: -50px auto 0;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-bottom: 40px;
+    text-align: left;
+}
+
+.contact-item {
+    flex: 1 1 30%;
+    margin: 20px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-item h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-item p {
+    font-size: 1.2em;
+}
+
+.contact-item a {
+    color: #0066B1;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
+
+.customer-service {
+    margin: 30px 20px;
+    font-size: 1.1em;
+}
+
+.contact-form {
+    margin: 30px 20px;
+}
+
+.contact-form h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.contact-form p {
+    font-size: 1.2em;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    position:relative ;
+    bottom: 0;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .contact-info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .contact-item {
+        margin: 20px 0;
+    }
+
+    .contact-container {
+        padding: 15px;
+    }
+
+    .customer-service, .contact-form {
+        margin: 20px 0;
+    }
+}

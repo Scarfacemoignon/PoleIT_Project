@@ -1,0 +1,90 @@
+
+* {
+    margin: 0;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../images/bk1.jpg);
+    background-size: cover;
+    padding: 150px;
+}
+
+
+.container-admin {
+    max-width: 1200px;
+    margin: 10px auto;
+    color: rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.916);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    padding: 20px;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+
+h1 {
+    color: #ffffff;
+    font-size: 50px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+.button-container {
+    margin-bottom: 20px;
+}
+
+button .article{
+    color: #0056b3;
+}
+.button-container button {
+    padding: 15px 20px;
+    border-radius: 3px;
+    background-color: rgb(249, 82, 10);
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    margin-right: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.button-container button:last-child {
+    margin-right: 0;
+}
+
+.button-container button:hover {
+    background-color: #0056b3;
+}
+
+
+.user-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.user-table th, .user-table td {
+    padding: 10px;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+}
+
+.user-table th {
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+}
+
+.delete-button {
+    color: #ff8215;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 300;
+}
