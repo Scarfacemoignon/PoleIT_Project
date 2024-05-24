@@ -1,0 +1,11 @@
+name: php lint
+
+on:
+  pull_request:
+  push:
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - uses: fxpw/PHP-Lint-php8.3@master
