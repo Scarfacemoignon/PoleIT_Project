@@ -1,0 +1,24 @@
+name: Créer une balise à la fusion
+
+on:
+  pull_request:
+    branches: [ main ]
+    status: merged
+
+jobs:
+  creer_balise:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Obtenir le numéro de version
+        id: get_version
+        run: |
+          echo "VERSION=$(git rev-parse --abbrev-ref HEAD)"
+          echo "::set-output name=VERSION::$VERSION"
+
+      - name: Créer une balise
+        run: |
+          git tag "v${{ steps.get_version.outputs.VERSION }}"
+          git push origin "v${{ steps.get_version.outputs.VERSION }}"

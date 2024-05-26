@@ -1,0 +1,23 @@
+name: html lint
+
+on:
+  push:
+    branches:  main
+
+jobs:
+  lint-html:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout
+
+      - name: Installer Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Installer stylelint
+        run: npm install stylelint
+
+      - name: Vérifier le code HTML
+        run: stylelint .
