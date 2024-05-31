@@ -92,7 +92,7 @@
         </div>
       </section>
     <?php else: ?>
-      <p>No article found.</p>
+      <p>No item.</p>
     <?php endif; 
     $connect->close();
   ?>
