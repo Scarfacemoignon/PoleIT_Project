@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="6866fe8d-0169-41e2-b603-53d11ea35c1c" name="Changes" comment="" />
+    <list default="true" id="6866fe8d-0169-41e2-b603-53d11ea35c1c" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -77,6 +79,11 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yannn\PycharmProjects\PoleIT_Project" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -98,7 +105,7 @@
       <workItem from="1716546791724" duration="1352000" />
       <workItem from="1716551050821" duration="12866000" />
       <workItem from="1716568560435" duration="1712000" />
-      <workItem from="1719318193119" duration="4969000" />
+      <workItem from="1719318193119" duration="5938000" />
     </task>
     <servers />
   </component>
